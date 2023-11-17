@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #calc{
+     margin-left: 200px;
+      width: 350px;
+      height: 700px;
+      border: 2px solid black;
+      background-color: rgb(183, 21, 64);
+      border-radius: 5px;
+      box-shadow: 5px 5px lightblue;
+    }
+    #display{
+      width: 300px;
+      
+      margin: 5px 20px 20px 20px;
+      height: 70px;
+      background-color: rgb(96, 163, 188);
+      font-size: 25px;
+      border-radius: 5px;
+
+    }
+    #button-container{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .button{
+     width: 70px;
+     height: 70px;
+     margin: 10px;
+     background-color: rgb(246, 185, 59);
+     font-size: 25px;
+     box-shadow: 5px 5px 2px #000;
+     border-radius: 5px;
+    }
+    #show{
+      font-size: 12px;
+      margin-left: 225px;
+    }
+  </style>
+  
+  <title>Calculator</title>
+</head>
+<body>
+  <div id="calc">
+    <div id="show">
+      <h2>
+        fx-1000 Casio
+      </h2>
+    </div>
+    <input type="text" id="display" readonly>
+    <div id="button-container">
+    <button class="button" onclick="
+      display = '';
+      document.querySelector('#display').value = display">C</button>
+    <button class="button" onclick="
+    display = display + '1';
+    document.querySelector('#display').value = display">1</button>
+    <button class="button" onclick="
+    display = display + '2';
+    document.querySelector('#display').value = display">2</button>
+    <button class="button" onclick="
+    display += '+';
+    document.querySelector('#display').value = display">+</button>
+    <button class="button" onclick="
+    display = display+'3';
+    document.querySelector('#display').value = display">3</button>
+    <button class="button" onclick="
+    display = display+'4';
+    document.querySelector('#display').value = display">4</button>
+    <button class="button" onclick="
+    display = display+'-';
+    document.querySelector('#display').value = display">-</button>
+    <button class="button" onclick="
+    display = display+'5';
+    document.querySelector('#display').value = display">5</button>
+    <button class="button" onclick="
+    display = display+'6';
+    document.querySelector('#display').value = display">6</button>
+    <button class="button" onclick="
+    display = display+'*';
+    document.querySelector('#display').value = display">*</button>
+    <button class="button" onclick="
+    display = display+'7';
+    document.querySelector('#display').value = display">7</button>
+    <button class="button" onclick="
+    display = display+'8';
+    document.querySelector('#display').value = display">8</button>
+    <button class="button" onclick="
+    display = display+'/';
+    document.querySelector('#display').value = display">/</button>
+    <button class="button" onclick="
+    display = eval(display);
+    document.querySelector('#display').value = display">=</button>
+    <button class="button" onclick="
+    display = display+'9';
+    document.querySelector('#display').value = display">9</button>
+    <button class="button" onclick="
+    display = display+'8';
+    document.querySelector('#display').value = display">0</button>
+    <button class="button" onclick="
+    display = display+'.';
+    document.querySelector('#display').value = display">.</button>
+  </div>
+  </div>
+  <script>
+    let display = '';
+  </script>
+</body>
+</html>
